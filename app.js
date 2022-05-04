@@ -1,18 +1,13 @@
-const fs = require('fs');
-const generatePage = require('./src/page-template');
+const inquirer = require('inquirer');
+//const fs = require('fs');
+//const generatePage = require('./src/page-template');
 
-const profileDataArgs = process.argv.slice(2);
+//const pageHTML = generatePage(theName, github);
 
-console.log(profileDataArgs);
+//fs.writeFile('./index.html', pageHTML, err => {
+//  if (err) throw err;
 
-const [theName, github] = profileDataArgs;
+//  console.log('Portfolio complete! Check out index.html to see the output!');
+//});
 
-console.log(theName, github);
-
-const pageHTML = generatePage(theName, github);
-
-fs.writeFile('./index.html', pageHTML, err => {
-  if (err) throw err;
-
-  console.log('Portfolio complete! Check out index.html to see the output!');
-});
+console.log(inquirer);
